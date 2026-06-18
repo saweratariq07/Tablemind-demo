@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@supabase/supabase-js": "^2.108.2",
-=======
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
     "ajv": "^8.20.0",
     "lucide-react": "^0.383.0",
     "qrcode.react": "^4.2.0",

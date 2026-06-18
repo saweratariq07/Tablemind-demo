@@ -1,6 +1,5 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-<<<<<<< HEAD
 import { useAuth } from '../context/AuthContext';
 import { useViewport } from '../components/Shared';
 import { Monitor, Tablet, ChefHat, QrCode, BarChart3, Wifi, ArrowRight, Star, LogOut } from 'lucide-react';
@@ -12,15 +11,6 @@ export default function HomeScreen() {
 
   const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User';
 
-=======
-import { useViewport } from '../components/Shared';
-import { Monitor, Tablet, ChefHat, QrCode, BarChart3, Wifi, ArrowRight, Star } from 'lucide-react';
-
-export default function HomeScreen() {
-  const { setCurrentScreen } = useApp();
-  const { isMobile, isTablet } = useViewport();
-
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
   const screens = [
     { id: 'dashboard', icon: <BarChart3 size={22} />, label: 'Owner Dashboard', desc: 'Sales, analytics, live orders & inventory overview', color: '#4A90D9', bg: '#EEF4FC' },
     { id: 'pos', icon: <Tablet size={22} />, label: 'Tablet POS', desc: 'Staff order-taking app with menu, cart & modifiers', color: '#3A7D44', bg: '#EAF4EB' },
@@ -34,7 +24,6 @@ export default function HomeScreen() {
     <div style={{
       minHeight: '100vh', background: 'var(--cream)', display: 'flex', flexDirection: 'column',
       alignItems: 'center', justifyContent: 'center', padding: isMobile ? '28px 16px' : '40px 24px',
-<<<<<<< HEAD
       position: 'relative',
     }}>
       <div style={{
@@ -57,9 +46,6 @@ export default function HomeScreen() {
           <LogOut size={14} /> Sign Out
         </button>
       </div>
-=======
-    }}>
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
       {/* Hero */}
       <div style={{ width: '100%', maxWidth: 960, marginBottom: isMobile ? 32 : 48, animation: 'fadeIn 0.5s ease' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: isMobile ? 20 : 28 }}>

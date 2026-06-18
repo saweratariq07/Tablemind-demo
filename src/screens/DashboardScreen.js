@@ -1,20 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
-<<<<<<< HEAD
 import { useAuth } from '../context/AuthContext';
-=======
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
 import { Logo, OnlineBadge, Card, Badge, useViewport, TimerBadge } from '../components/Shared';
 import {
   LayoutDashboard, ShoppingBag, Package, Users, BarChart2, Settings, Bell,
   TrendingUp, TrendingDown, AlertCircle, ArrowUpRight, Home, Menu, X,
   Clock, DollarSign, Activity, FileText, CheckCircle2, QrCode, ClipboardList,
   ThumbsUp, UserCheck, Star, Sparkles, ChevronRight, Save, Plus, Trash2,
-<<<<<<< HEAD
   MessageSquare, LogOut
-=======
-  MessageSquare
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
 } from 'lucide-react';
 import ReportsScreen from './ReportsScreen';
 import InventoryScreen from './InventoryScreen';
@@ -78,12 +71,9 @@ export default function DashboardScreen() {
     getElapsedMins,
     showNotification
   } = useApp();
-<<<<<<< HEAD
   const { user, signOut } = useAuth();
 
   const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User';
-=======
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
 
   // Reset default state to 'dashboard' to keep the original view intact
   const [navActive, setNavActive] = useState('dashboard');
@@ -514,27 +504,19 @@ export default function DashboardScreen() {
             <UserCheck size={14} style={{ color: 'var(--terracotta)' }} />
           </div>
           <div>
-<<<<<<< HEAD
             <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--espresso)' }}>{displayName}</div>
             <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>{user?.email || 'TableMind Admin'}</div>
-=======
-            <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--espresso)' }}>Kwame Asante</div>
-            <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>TableMind Admin</div>
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
           </div>
         </div>
         <button onClick={() => { setCurrentScreen('home'); setNavOpen(false); }} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-muted)', fontSize: 12, fontFamily: 'var(--font-body)', whiteSpace: 'nowrap' }}>
           <Home size={13} /> Back to Demo
         </button>
-<<<<<<< HEAD
         <button
           onClick={async () => { await signOut(); setCurrentScreen('home'); setNavOpen(false); }}
           style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--terracotta)', fontSize: 12, fontFamily: 'var(--font-body)', whiteSpace: 'nowrap' }}
         >
           <LogOut size={13} /> Sign Out
         </button>
-=======
->>>>>>> ecaa6e1ac238950283825c4b4ec1c17376ab6bed
       </div>
     </nav>
   );
