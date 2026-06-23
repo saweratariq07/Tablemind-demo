@@ -54,7 +54,7 @@ export default function AuthScreen() {
         <div style={{
           flex: '0 0 42%',
           maxWidth: 520,
-          background: 'linear-gradient(145deg, var(--espresso) 0%, #3D2218 55%, var(--terracotta) 100%)',
+          background: 'linear-gradient(145deg, var(--espresso) 0%, var(--primary-dark) 55%, var(--primary) 100%)',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -76,7 +76,7 @@ export default function AuthScreen() {
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ marginBottom: 40 }}>
               <img
-                src="/Dashboard logo.png"
+                src="/New logo.png"
                 alt="TableMind"
                 style={{ width: 52, height: 'auto', display: 'block', marginBottom: 16 }}
               />
@@ -273,20 +273,20 @@ export default function AuthScreen() {
                 padding: '13px 20px',
                 borderRadius: 'var(--radius-md)',
                 border: 'none',
-                background: loading || !isConfigured ? 'var(--nude)' : 'var(--terracotta)',
+                background: loading || !isConfigured ? 'var(--nude)' : 'var(--primary)',
                 color: '#fff',
                 fontSize: 15,
                 fontWeight: 700,
                 fontFamily: 'var(--font-body)',
                 cursor: loading || !isConfigured ? 'not-allowed' : 'pointer',
                 transition: 'all 0.2s',
-                boxShadow: loading || !isConfigured ? 'none' : '0 4px 14px rgba(192,69,42,0.3)',
+                boxShadow: loading || !isConfigured ? 'none' : '0 4px 14px rgba(108, 122, 77, 0.3)',
               }}
               onMouseEnter={(e) => {
-                if (!loading && isConfigured) e.currentTarget.style.background = 'var(--terracotta-light)';
+                if (!loading && isConfigured) e.currentTarget.style.background = 'var(--primary-light)';
               }}
               onMouseLeave={(e) => {
-                if (!loading && isConfigured) e.currentTarget.style.background = 'var(--terracotta)';
+                if (!loading && isConfigured) e.currentTarget.style.background = 'var(--primary)';
               }}
             >
               {loading ? 'Please wait...' : mode === 'login' ? 'Sign In' : 'Send Reset Link'}
@@ -310,7 +310,7 @@ export default function AuthScreen() {
 function alertBoxStyle(type) {
   const styles = {
     warning: { bg: 'var(--warning-bg)', border: 'var(--warning)', color: 'var(--espresso)' },
-    error: { bg: 'var(--danger-bg)', border: 'var(--terracotta)', color: 'var(--terracotta)' },
+    error: { bg: 'var(--danger-bg)', border: 'var(--warning)', color: 'var(--warning)' },
     success: { bg: 'var(--success-bg)', border: 'var(--success)', color: 'var(--success)' },
   };
   const s = styles[type];
@@ -357,8 +357,8 @@ const inputStyle = {
 };
 
 const focusBorder = (e) => {
-  e.target.style.borderColor = 'var(--terracotta)';
-  e.target.style.boxShadow = '0 0 0 3px rgba(192,69,42,0.1)';
+  e.target.style.borderColor = 'var(--primary)';
+  e.target.style.boxShadow = '0 0 0 3px rgba(108, 122, 77, 0.12)';
 };
 
 const blurBorder = (e) => {
@@ -381,7 +381,7 @@ const toggleBtnStyle = {
 const linkBtnStyle = {
   background: 'none',
   border: 'none',
-  color: 'var(--terracotta)',
+  color: 'var(--primary)',
   fontWeight: 600,
   cursor: 'pointer',
   fontSize: 13,

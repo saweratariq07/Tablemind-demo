@@ -5,31 +5,48 @@
 }
 
 :root {
-  --cream: #F5EFE6;
-  --cream-dark: #EDE4D6;
-  --cream-darker: #E0D4C0;
-  --espresso: #2C1810;
-  --espresso-light: #4A2C1A;
-  --terracotta: #C0452A;
-  --terracotta-light: #D4604A;
-  --terracotta-pale: #F5E8E4;
-  --nude: #D4B896;
-  --nude-light: #E8D5BE;
-  --sand: #B8A082;
-  --text-primary: #2C1810;
-  --text-secondary: #6B4C3A;
-  --text-muted: #9A7A68;
-  --border: rgba(44, 24, 16, 0.12);
-  --border-strong: rgba(44, 24, 16, 0.2);
-  --shadow-sm: 0 2px 8px rgba(44, 24, 16, 0.08);
-  --shadow-md: 0 4px 20px rgba(44, 24, 16, 0.12);
-  --shadow-lg: 0 8px 40px rgba(44, 24, 16, 0.16);
-  --success: #3A7D44;
-  --success-bg: #E8F4EA;
-  --warning: #C07830;
-  --warning-bg: #FBF0E0;
-  --danger: #C0452A;
-  --danger-bg: #F5E8E4;
+  /* Core brand */
+  --primary: #6C7A4D;
+  --primary-light: #7D8F5C;
+  --primary-dark: #5A6640;
+  --primary-pale: #F2F2EB;
+
+  /* Legacy aliases (used across components) */
+  --terracotta: var(--primary);
+  --terracotta-light: var(--primary-light);
+  --terracotta-pale: var(--primary-pale);
+
+  /* Backgrounds */
+  --cream: #F9F9F5;
+  --cream-dark: #F2F2EB;
+  --cream-darker: #E8E8E0;
+  --nude: #E5E2D8;
+  --nude-light: #EDEAE2;
+  --sand: var(--primary);
+
+  /* Text */
+  --espresso: #1A1A1A;
+  --espresso-light: #444444;
+  --text-primary: #1A1A1A;
+  --text-secondary: #444444;
+  --text-muted: #555555;
+
+  /* Semantic */
+  --success: #6C7A4D;
+  --success-bg: #F2F2EB;
+  --warning: #8B7355;
+  --warning-bg: #F2F2EB;
+  --danger: #8B7355;
+  --danger-bg: #F2F2EB;
+
+  /* UI */
+  --border: rgba(26, 26, 26, 0.1);
+  --border-strong: rgba(26, 26, 26, 0.15);
+  --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.06);
+  --shadow-md: 0 4px 20px rgba(26, 26, 26, 0.1);
+  --shadow-lg: 0 8px 40px rgba(26, 26, 26, 0.15);
+  --focus-ring: #6C7A4D;
+
   --font-display: 'Playfair Display', serif;
   --font-body: 'DM Sans', sans-serif;
   --radius-sm: 8px;
@@ -46,11 +63,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--nude); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--sand); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
 /* Animations */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }

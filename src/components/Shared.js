@@ -13,8 +13,8 @@ export function Logo({ size = 'md' }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: s.gap, maxWidth: '100%' }}>
       <img
-        src="/Dashboard logo.png"
-        alt="TableMind dashboard logo"
+        src="/New logo.png"
+        alt="TableMind logo"
         style={{
           width: s.img,
           minWidth: s.img,
@@ -74,9 +74,9 @@ export function Notification() {
   const { notification } = useApp();
   if (!notification) return null;
   const colors = {
-    success: { bg: 'var(--success)', border: '#2A6B34' },
-    warning: { bg: '#C07830', border: '#A06020' },
-    error: { bg: 'var(--terracotta)', border: '#A03020' },
+    success: { bg: 'var(--success)', border: 'var(--primary-dark)' },
+    warning: { bg: 'var(--warning)', border: 'var(--primary-dark)' },
+    error: { bg: 'var(--warning)', border: 'var(--primary-dark)' },
   };
   const c = colors[notification.type] || colors.success;
   return (

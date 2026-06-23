@@ -179,7 +179,7 @@ export default function StaffScreen() {
 
         {/* Orders Taken */}
         <Card style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <div style={{ width: 38, height: 38, borderRadius: 8, background: '#EEF4FC', color: '#1A56A0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 38, height: 38, borderRadius: 8, background: 'var(--primary-pale)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <ShoppingBag size={18} />
           </div>
           <div>
@@ -395,7 +395,7 @@ export default function StaffScreen() {
               </div>
 
               <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                <TrendingUp size={16} style={{ color: '#1A56A0', marginTop: 2, flexShrink: 0 }} />
+                <TrendingUp size={16} style={{ color: 'var(--primary)', marginTop: 2, flexShrink: 0 }} />
                 <div>
                   <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--espresso)' }}>Most Orders Processed</div>
                   <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 2 }}>

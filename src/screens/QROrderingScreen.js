@@ -95,7 +95,7 @@ export default function QROrderingScreen() {
   if (submitted) {
     return (
       <div style={{
-        minHeight: '100vh', background: 'linear-gradient(160deg, #FDF6EE 0%, #F0E4D0 100%)',
+        minHeight: '100vh', background: 'linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%)',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         padding: 32, fontFamily: 'var(--font-body)', textAlign: 'center',
       }}>
@@ -130,11 +130,11 @@ export default function QROrderingScreen() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#FAF5EE', fontFamily: 'var(--font-body)', maxWidth: 430, margin: '0 auto', position: 'relative' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: 'var(--font-body)', maxWidth: 430, margin: '0 auto', position: 'relative' }}>
       <div style={{ background: '#fff', padding: '14px 18px', borderBottom: '1px solid var(--border)', position: 'sticky', top: 0, zIndex: 10, boxShadow: '0 2px 10px rgba(0,0,0,0.06)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 32, height: 32, borderRadius: 8, background: 'linear-gradient(135deg, var(--terracotta), var(--espresso))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+            <div style={{ width: 32, height: 32, borderRadius: 8, background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
               <Utensils size={18} />
             </div>
             <div>
@@ -192,7 +192,7 @@ export default function QROrderingScreen() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
               <div style={{ background: '#fff', padding: 10, borderRadius: 16, border: '1px solid var(--border)' }}>
-                <QRCodeCanvas value={qrValue} size={180} includeMargin bgColor="#FFFFFF" fgColor="#2C1810" level="M" />
+                <QRCodeCanvas value={qrValue} size={180} includeMargin bgColor="#FFFFFF" fgColor="#1A1A1A" level="M" />
               </div>
             </div>
             <div style={{ fontSize: 10, color: 'var(--text-muted)', wordBreak: 'break-all', lineHeight: 1.5 }}>
@@ -202,7 +202,7 @@ export default function QROrderingScreen() {
         </div>
       )}
 
-      <div style={{ background: 'linear-gradient(135deg, var(--terracotta), #A03018)', padding: '20px 18px', color: '#fff', position: 'relative', overflow: 'hidden', marginTop: 16 }}>
+      <div style={{ background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))', padding: '20px 18px', color: '#fff', position: 'relative', overflow: 'hidden', marginTop: 16 }}>
         <div style={{ fontSize: 18, fontWeight: 700, fontFamily: 'var(--font-display)', marginBottom: 4 }}>Craving made simple.</div>
         <div style={{ fontSize: 12, opacity: 0.85 }}>Good food, great experience.</div>
       </div>

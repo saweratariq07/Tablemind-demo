@@ -234,7 +234,7 @@ export default function FeedbackScreen() {
 
         {/* Avg Response Time */}
         <Card style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <div style={{ width: 38, height: 38, borderRadius: 8, background: '#EEF4FC', color: '#4A90D9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 38, height: 38, borderRadius: 8, background: 'var(--primary-pale)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Clock size={18} />
           </div>
           <div>

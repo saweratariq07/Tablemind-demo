@@ -164,9 +164,9 @@ export default function DashboardScreen() {
     const statCards = [
       { label: 'Live Orders', value: kdsOrders.length, icon: <Activity size={12} style={{ color: 'var(--terracotta)' }} />, sub: `+${kdsOrders.filter(o => getElapsedMins(o.placedAt) < 5).length} new`, color: 'var(--terracotta)', chart: <Sparkline data={[14, 18, 20, 16, 22, 24]} color="var(--terracotta)" /> },
       { label: 'Total Sales', value: `GH₵ ${dashboardStats.totalSales.toLocaleString()}`, icon: <DollarSign size={12} style={{ color: 'var(--success)' }} />, sub: '+12.5% vs last week', color: 'var(--success)', chart: <Sparkline data={SPARKLINE_SALES} color="var(--success)" /> },
-      { label: 'Inventory', value: dashboardStats.inventory, icon: <Package size={12} style={{ color: '#C07830' }} />, sub: 'Low stock items', color: '#C07830', chart: null, alert: activeLowStock.length > 0 },
+      { label: 'Inventory', value: dashboardStats.inventory, icon: <Package size={12} style={{ color: 'var(--warning)' }} />, sub: 'Low stock items', color: 'var(--warning)', chart: null, alert: activeLowStock.length > 0 },
       { label: 'Food Waste', value: `${dashboardStats.waste}%`, icon: <Trash2 size={12} style={{ color: 'var(--text-secondary)' }} />, sub: '-4% vs last week', color: 'var(--text-secondary)', chart: null },
-      { label: 'Customers', value: dashboardStats.customers, icon: <Users size={12} style={{ color: '#4A90D9' }} />, sub: '+18 new this week', color: '#4A90D9', chart: <MiniBarChart /> },
+      { label: 'Customers', value: dashboardStats.customers, icon: <Users size={12} style={{ color: 'var(--primary-light)' }} />, sub: '+18 new this week', color: 'var(--primary-light)', chart: <MiniBarChart /> },
       { label: 'Peak Hours', value: dashboardStats.peakHours, icon: <Clock size={12} style={{ color: 'var(--warning)' }} />, sub: 'Busiest time', color: 'var(--warning)', chart: null },
     ];
 
@@ -263,7 +263,7 @@ export default function DashboardScreen() {
           </Card>
         </div>
 
-        <div style={{ marginTop: 20, background: 'linear-gradient(135deg, var(--espresso), var(--espresso-light))', borderRadius: 'var(--radius-lg)', padding: '20px 24px', display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'center', justifyContent: 'space-between', gap: 14 }}>
+        <div style={{ marginTop: 20, background: 'linear-gradient(135deg, var(--espresso), var(--primary-dark))', borderRadius: 'var(--radius-lg)', padding: '20px 24px', display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'center', justifyContent: 'space-between', gap: 14 }}>
           <div>
             <div style={{ color: '#fff', fontSize: 15, fontWeight: 700, fontFamily: 'var(--font-display)' }}>Smarter operations. Happier guests.</div>
             <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 12, marginTop: 2 }}>Run your restaurant with clarity and confidence.</div>

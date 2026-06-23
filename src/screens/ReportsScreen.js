@@ -290,7 +290,7 @@ export default function ReportsScreen() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
               <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
-                <ShoppingBag size={13} style={{ color: '#4A90D9' }} /> TOTAL ORDERS
+                <ShoppingBag size={13} style={{ color: 'var(--primary)' }} /> TOTAL ORDERS
               </div>
               <div style={{ fontSize: 24, fontWeight: 700, color: 'var(--espresso)', fontFamily: 'var(--font-display)', marginTop: 4 }}>
                 {activePeriodData.ordersCount}
@@ -310,7 +310,7 @@ export default function ReportsScreen() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
               <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 5 }}>
-                <Activity size={13} style={{ color: '#C07830' }} /> AVG ORDER VALUE
+                <Activity size={13} style={{ color: 'var(--warning)' }} /> AVG ORDER VALUE
               </div>
               <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--espresso)', fontFamily: 'var(--font-display)', marginTop: 4, whiteSpace: 'nowrap' }}>
                 GH₵ {activePeriodData.avgOrderValue.toFixed(2)}
@@ -722,11 +722,11 @@ export default function ReportsScreen() {
             {alertsList.map((alert) => (
               <div key={alert.id} style={{
                 display: 'flex', gap: 8, padding: '10px 12px', borderRadius: 8,
-                background: alert.type === 'danger' ? 'var(--terracotta-pale)' : alert.type === 'warning' ? 'var(--warning-bg)' : '#E8F0FE',
+                background: alert.type === 'danger' ? 'var(--primary-pale)' : alert.type === 'warning' ? 'var(--warning-bg)' : 'var(--cream-dark)',
                 border: `1px solid ${alert.type === 'danger' ? 'rgba(192, 69, 42, 0.2)' : alert.type === 'warning' ? 'rgba(192, 120, 48, 0.2)' : 'rgba(26, 86, 160, 0.1)'}`
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {alert.type === 'danger' ? <AlertCircle size={14} style={{ color: 'var(--terracotta)' }} /> : alert.type === 'warning' ? <AlertTriangle size={14} style={{ color: 'var(--warning)' }} /> : <Info size={14} style={{ color: '#1A56A0' }} />}
+                  {alert.type === 'danger' ? <AlertCircle size={14} style={{ color: 'var(--warning)' }} /> : alert.type === 'warning' ? <AlertTriangle size={14} style={{ color: 'var(--warning)' }} /> : <Info size={14} style={{ color: 'var(--primary)' }} />}
                 </div>
                 <div style={{ fontSize: 11, color: 'var(--text-primary)', lineHeight: 1.4 }}>
                   {alert.message}

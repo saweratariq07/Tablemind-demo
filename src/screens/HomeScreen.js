@@ -12,12 +12,12 @@ export default function HomeScreen() {
   const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User';
 
   const screens = [
-    { id: 'dashboard', icon: <BarChart3 size={22} />, label: 'Owner Dashboard', desc: 'Sales, analytics, live orders & inventory overview', color: '#4A90D9', bg: '#EEF4FC' },
-    { id: 'pos', icon: <Tablet size={22} />, label: 'Tablet POS', desc: 'Staff order-taking app with menu, cart & modifiers', color: '#3A7D44', bg: '#EAF4EB' },
-    { id: 'kds', icon: <ChefHat size={22} />, label: 'Kitchen Display', desc: 'Live order flow from New to Preparing to Ready', color: '#C07830', bg: '#FBF0E0' },
-    { id: 'qr', icon: <QrCode size={22} />, label: 'QR Ordering', desc: 'Customer scans table QR and orders from phone', color: 'var(--terracotta)', bg: 'var(--terracotta-pale)' },
-    { id: 'history', icon: <Monitor size={22} />, label: 'Order History', desc: 'Completed orders with timing, sync & payment status', color: '#6B4C9A', bg: '#F0EBF8' },
-    { id: 'offline', icon: <Wifi size={22} />, label: 'Offline Mode Demo', desc: 'Toggle offline, create orders, watch them sync back', color: '#1A7A8A', bg: '#E5F4F6' },
+    { id: 'dashboard', icon: <BarChart3 size={22} />, label: 'Owner Dashboard', desc: 'Sales, analytics, live orders & inventory overview', color: 'var(--primary)', bg: 'var(--primary-pale)' },
+    { id: 'pos', icon: <Tablet size={22} />, label: 'Tablet POS', desc: 'Staff order-taking app with menu, cart & modifiers', color: 'var(--primary-dark)', bg: 'var(--cream-dark)' },
+    { id: 'kds', icon: <ChefHat size={22} />, label: 'Kitchen Display', desc: 'Live order flow from New to Preparing to Ready', color: 'var(--warning)', bg: 'var(--warning-bg)' },
+    { id: 'qr', icon: <QrCode size={22} />, label: 'QR Ordering', desc: 'Customer scans table QR and orders from phone', color: 'var(--primary-light)', bg: 'var(--primary-pale)' },
+    { id: 'history', icon: <Monitor size={22} />, label: 'Order History', desc: 'Completed orders with timing, sync & payment status', color: 'var(--primary-dark)', bg: 'var(--nude-light)' },
+    { id: 'offline', icon: <Wifi size={22} />, label: 'Offline Mode Demo', desc: 'Toggle offline, create orders, watch them sync back', color: 'var(--primary)', bg: 'var(--cream-dark)' },
   ];
 
   return (
@@ -50,7 +50,7 @@ export default function HomeScreen() {
       <div style={{ width: '100%', maxWidth: 960, marginBottom: isMobile ? 32 : 48, animation: 'fadeIn 0.5s ease' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: isMobile ? 20 : 28 }}>
           <img
-            src="/Home screen logo.png"
+            src="/New Home screen logo.png"
             alt="TableMind home screen logo"
             style={{
               width: isMobile ? 'min(82vw, 320px)' : 'clamp(240px, 34vw, 360px)',
