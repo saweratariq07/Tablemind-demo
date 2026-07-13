@@ -120,7 +120,7 @@ export default function AuthScreen() {
             marginTop: 'auto', paddingTop: 48,
             fontSize: 12, color: 'rgba(255,255,255,0.4)',
           }}>
-            Made for Ghana · Restaurant Management
+            Restaurant Management
           </p>
         </div>
       )}
@@ -298,7 +298,7 @@ export default function AuthScreen() {
               textAlign: 'center', marginTop: 32,
               fontSize: 12, color: 'var(--text-muted)',
             }}>
-              Made for Ghana · Restaurant Management
+              Restaurant Management
             </p>
           )}
         </div>

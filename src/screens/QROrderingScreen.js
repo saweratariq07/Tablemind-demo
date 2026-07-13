@@ -333,7 +333,7 @@ export default function QROrderingScreen() {
         </div>
       )}
 
-      <div style={{ textAlign: 'center', padding: '8px 0 80px', fontSize: 11, color: 'var(--text-muted)' }}>Made for Ghana</div>
+      <div style={{ textAlign: 'center', padding: '8px 0 80px', fontSize: 11, color: 'var(--text-muted)' }}>TableMind · Restaurant Management</div>
     </div>
   );
 }

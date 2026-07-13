@@ -159,7 +159,7 @@ export default function KDSScreen() {
 
       {/* Footer */}
       <div style={{ background: '#fff', borderTop: '1px solid var(--border)', padding: '6px 24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>Made for Ghana</div>
+        <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>TableMind · Restaurant Management</div>
       </div>
     </div>
   );

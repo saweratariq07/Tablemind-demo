@@ -308,7 +308,7 @@ export default function OfflineScreen() {
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><Sparkles size={16} style={{ color: 'var(--warning)' }} /> Offline demo complete!</span>
                 </div>
                 <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, lineHeight: 1.5, marginBottom: 14 }}>
-                  You've seen how TableMind keeps your restaurant running even when internet drops — a key feature for the Ghana market.
+                  You've seen how TableMind keeps your restaurant running even when internet drops — a critical feature for any busy restaurant.
                 </div>
                 <button onClick={() => setCurrentScreen('kds')} style={{ background: 'var(--terracotta)', color: '#fff', border: 'none', borderRadius: 8, padding: '9px 16px', cursor: 'pointer', fontSize: 12, fontWeight: 700, fontFamily: 'var(--font-body)', display: 'flex', alignItems: 'center', gap: 5 }}>
                   View Kitchen Display <ArrowRight size={12} />

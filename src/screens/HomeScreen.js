@@ -70,7 +70,7 @@ export default function HomeScreen() {
             <span style={{ color: 'var(--terracotta)' }}>Faster Service.</span>
           </h1>
           <p style={{ fontSize: isMobile ? 15 : 16, color: 'var(--text-secondary)', maxWidth: 520, margin: '0 auto 8px', lineHeight: 1.5 }}>
-            The complete restaurant management system built for Ghana from QR ordering to kitchen display to owner analytics.
+            The complete restaurant management system — from QR ordering to kitchen display to owner analytics.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, fontSize: 12, color: 'var(--text-muted)', fontWeight: 500, flexWrap: 'wrap' }}>
             <Star size={12} style={{ color: 'var(--terracotta)' }} /> Interactive Demo Prototype. Click any screen to explore
@@ -114,7 +114,7 @@ export default function HomeScreen() {
 
       {/* Footer */}
       <div style={{ marginTop: 48, textAlign: 'center', fontSize: 12, color: 'var(--text-muted)' }}>
-        Made for Ghana · AI-Powered Restaurant Management · Pitch Demo v1.0
+        AI-Powered Restaurant Management · Pitch Demo v1.0
       </div>
     </div>
   );
