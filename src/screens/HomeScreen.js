@@ -30,21 +30,14 @@ export default function HomeScreen() {
         position: 'absolute', top: isMobile ? 16 : 24, right: isMobile ? 16 : 24,
         display: 'flex', alignItems: 'center', gap: 12,
       }}>
-        <span style={{ fontSize: 13, color: 'var(--text-secondary)', fontWeight: 500 }}>
-          {displayName}
-        </span>
-        <button
-          onClick={() => signOut()}
-          style={{
-            display: 'flex', alignItems: 'center', gap: 6,
-            padding: '8px 14px', borderRadius: 20,
-            border: '1.5px solid var(--border)', background: '#fff',
-            color: 'var(--terracotta)', cursor: 'pointer',
-            fontSize: 12, fontWeight: 600, fontFamily: 'var(--font-body)',
-          }}
-        >
-          <LogOut size={14} /> Sign Out
-        </button>
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          padding: '6px 14px', borderRadius: 20,
+          background: 'var(--terracotta-pale)', border: '1px solid var(--border)',
+          color: 'var(--terracotta)', fontSize: 12, fontWeight: 700,
+        }}>
+          Live Demo
+        </div>
       </div>
       {/* Hero */}
       <div style={{ width: '100%', maxWidth: 960, marginBottom: isMobile ? 32 : 48, animation: 'fadeIn 0.5s ease' }}>

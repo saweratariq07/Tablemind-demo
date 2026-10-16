@@ -504,19 +504,14 @@ export default function DashboardScreen() {
             <UserCheck size={14} style={{ color: 'var(--terracotta)' }} />
           </div>
           <div>
-            <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--espresso)' }}>{displayName}</div>
-            <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>{user?.email || 'TableMind Admin'}</div>
+            <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--espresso)' }}>Demo User</div>
+            <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>TableMind Demo</div>
           </div>
         </div>
         <button onClick={() => { setCurrentScreen('home'); setNavOpen(false); }} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-muted)', fontSize: 12, fontFamily: 'var(--font-body)', whiteSpace: 'nowrap' }}>
           <Home size={13} /> Back to Demo
         </button>
-        <button
-          onClick={async () => { await signOut(); setCurrentScreen('home'); setNavOpen(false); }}
-          style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--terracotta)', fontSize: 12, fontFamily: 'var(--font-body)', whiteSpace: 'nowrap' }}
-        >
-          <LogOut size={13} /> Sign Out
-        </button>
+        
       </div>
     </nav>
   );

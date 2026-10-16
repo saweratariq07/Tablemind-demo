@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
-import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 import { Notification } from './components/Shared';
 import { TABLES } from './data';
 import HomeScreen from './screens/HomeScreen';
@@ -10,17 +10,10 @@ import KDSScreen from './screens/KDSScreen';
 import QROrderingScreen from './screens/QROrderingScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import OfflineScreen from './screens/OfflineScreen';
-import AuthScreen from './screens/AuthScreen';
 import './index.css';
-
-function isPublicQrRoute() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('screen') === 'qr';
-}
 
 function Router() {
   const { currentScreen, setCurrentScreen, setSelectedTable, setOrderType } = useApp();
-  const { isAuthenticated, loading } = useAuth();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -53,28 +46,10 @@ function Router() {
     offline: <OfflineScreen />,
   };
 
-  if (loading) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'var(--cream)',
-        fontFamily: 'var(--font-body)',
-        color: 'var(--text-muted)',
-      }}>
-        Loading...
-      </div>
-    );
-  }
-
-  const showAuth = !isAuthenticated && !isPublicQrRoute() && currentScreen !== 'qr';
-
   return (
     <>
       <Notification />
-      {showAuth ? <AuthScreen /> : (screens[currentScreen] || <HomeScreen />)}
+      {screens[currentScreen] || <HomeScreen />}
     </>
   );
 }
